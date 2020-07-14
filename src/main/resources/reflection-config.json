@@ -1,0 +1,11 @@
+[
+  {
+    "name" : "org.eclipse.paho.client.mqttv3.logging.JSR47Logger",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  }
+]
