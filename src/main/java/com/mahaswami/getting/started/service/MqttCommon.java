@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.acme.getting.started.service;
+package com.mahaswami.getting.started.service;
 
 import java.io.File;
 import java.io.FileInputStream;

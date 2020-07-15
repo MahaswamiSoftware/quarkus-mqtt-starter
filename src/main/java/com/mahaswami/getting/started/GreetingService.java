@@ -1,4 +1,4 @@
-package org.acme.getting.started;
+package com.mahaswami.getting.started;
 
 import javax.enterprise.context.ApplicationScoped;
 

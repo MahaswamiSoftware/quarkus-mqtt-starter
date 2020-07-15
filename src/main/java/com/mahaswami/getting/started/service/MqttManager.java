@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.acme.getting.started.service;
+package com.mahaswami.getting.started.service;
 
 import org.eclipse.microprofile.config.ConfigProvider;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
@@ -27,7 +27,6 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttTopic;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
 import java.util.EventListener;
 import java.util.EventObject;
@@ -85,11 +84,9 @@ public class MqttManager implements MqttCallback {
 
     // ******************* Initialization *************************************
     public void init() {
-        System.out.println("connected: " + connected);
         clientConnectOptions = new MqttConnectOptions();
         clientConnectOptions.setCleanSession(true);
         clientConnectOptions.setKeepAliveInterval(1200);
-        //clientConnectOptions.setConnectionTimeout(5000);
         clientConnectOptions.setUserName(userName);
         clientConnectOptions.setPassword(password.toCharArray());
 
@@ -102,7 +99,6 @@ public class MqttManager implements MqttCallback {
             client = new MqttClient(brokerUrl + ":" + port, clientId, new MemoryPersistence());
             client.setCallback(this);
             client.connect(clientConnectOptions);
-            subscribe("demo.server.subscriber", 2);
             connected = true;
         } catch (MqttException exception) {
             connected = false;

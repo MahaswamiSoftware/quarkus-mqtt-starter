@@ -1,8 +1,8 @@
-package org.acme.getting.started;
+package com.mahaswami.getting.started;
 
 import io.quarkus.runtime.ShutdownEvent;
 import io.quarkus.runtime.StartupEvent;
-import org.acme.getting.started.service.MqttManager;
+import com.mahaswami.getting.started.service.MqttManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
